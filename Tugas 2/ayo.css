@@ -1,0 +1,218 @@
+
+header {
+    display:flexbox;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 24px;
+    background-color: #1f4e78;
+    color: white;
+}
+
+header h1,
+header p {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+aside {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 25px;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside section {
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+article {
+    width: 100%;
+}
+
+article section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+article ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding-left: 25px;
+    line-height: 1.6;
+    list-style-position: inside;
+}
+
+article li {
+    padding: 10px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table thead tr {
+    background-color: rgb(255, 0, 247);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 20px;
+        gap: 25px;
+    }
+
+    aside {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid gray;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+
+    article {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    article ol {
+        grid-template-columns:1fr;
+    }
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid black;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+table thead tr {
+    background-color: rgb(255, 0, 247);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    table th,
+    table td {
+        padding: 7px;
+    }
+}
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+        padding: 16px 30px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 30px;
+        gap: 25px;
+    }
+
+    aside {
+        width: 35%;
+        border-right: 1px solid gray;
+        border-bottom: none;
+        padding-right: 20px;
+    }
+
+    article {
+        width: 65%;
+        padding-left: 0;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        padding: 16px 40px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 50px;
+        gap: 30px;
+    }
+
+    aside {
+        width: 35%;
+        border-right: 1px solid gray;
+        border-bottom: none;
+        padding-right: 30px;
+    }
+
+    article {
+        width: 65%;
+        padding-left: 0;
+    }
+
+    article ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
