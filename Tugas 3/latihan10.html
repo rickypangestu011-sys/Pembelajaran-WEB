@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Belajar JavaScript Platform
+        </title>
+    </head>
+    <body>
+        <h1>Belajar JavaScript</h1>
+        <button onclick="perulangan()">Tombol</button>
+        <div id="hasil"></div>
+        <script>
+            function perulangan(){
+                var text = "";
+                var x;
+                for(x=0; x<=10; x++) {
+                    text += "Angka" + x + "<br>";
+                }
+            
+            document.getElementById("hasil").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>
