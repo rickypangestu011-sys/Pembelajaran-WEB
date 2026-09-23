@@ -1,1 +1,44 @@
+<html>
+    <head>
+        <title>
+            Kalkulator Sederhana
+        </title>
+        <link rel="stylesheet" href="/CSS/Kalkulator.css">
+    </head>
+    <body>
+        <!-- Bagian Tampilan Kalkulator -->
+        <h1>Kalkulator Sederhana</h1>
+        <label>Bilangan 1 :</label>
+        <input type="text" id="bilangan1"><br>
 
+        <label>Bilangan 2 :</label>
+        <input type="text" id="bilangan2"><br>
+
+        <label>Hasil      :</label>
+        <input type="text" id="hasil"><br>
+
+        <button onclick="Tambah()">Penjumlahan</button>
+        <button onclick="Kurang()">Pengurangan</button>
+
+        <!-- Bagian JavaScript -->
+        <script>
+            <!-- Fungsi untuk Menjumlahkan -->
+            function Tambah(){
+                let bilangan1 = document.getElementById("bilangan1").value;
+                let bilangan2 = document.getElementById("bilangan2").value;
+
+                let hasil = Number(bilangan1) + Number(bilangan2);
+
+                document.getElementById("hasil").value = hasil;
+            }
+            function Kurang(){
+                let bilangan1 = document.getElementById("bilangan1").value;
+                let bilangan2 = document.getElementById("bilangan2").value;
+
+                let hasil = Number(bilangan1) - Number(bilangan2);
+
+                document.getElementById("hasil").value = hasil;
+            }
+        </script>
+    </body>
+</html>

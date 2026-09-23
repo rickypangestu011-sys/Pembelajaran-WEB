@@ -1,0 +1,28 @@
+/* Bagian Body */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px;
+}
+/* Bagian Judul */
+h1 {
+    text-align: left;
+}
+/* Bagian Label */
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+/* Bagian Input */
+input {
+    width: 150px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* Bagian Button */
+button {
+    padding: 6px 12px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
