@@ -1,0 +1,256 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #1f4e78;
+    color: white;
+}
+
+header h1,
+header p {
+    margin: 0;
+}
+
+header button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tombol-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tombol-info button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+aside {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 25px;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside section {
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+article {
+    width: 100%;
+}
+
+article section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+article ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding-left: 25px;
+    line-height: 1.6;
+    list-style-position: inside;
+}
+
+article li {
+    padding: 10px;
+}
+
+.form-portofolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-portofolio input {
+    padding: 8px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.form-portofolio button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table thead tr {
+    background-color: rgb(255, 0, 247);
+    color: white;
+}
+
+table button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.dark-mode header {
+    background-color: #112b45;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+    border-color: #555;
+}
+
+body.dark-mode input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+.tersembunyi {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    header {
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    aside {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    article ol {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    table th,
+    table td {
+        padding: 7px;
+    }
+
+    .form-portofolio {
+        flex-direction: column;
+    }
+
+    .form-portofolio input,
+    .form-portofolio button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    header {
+        padding: 16px 30px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 30px;
+        gap: 25px;
+    }
+
+    aside {
+        width: 35%;
+        border-right: 1px solid gray;
+        border-bottom: none;
+        padding-right: 20px;
+    }
+
+    article {
+        width: 65%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    header {
+        padding: 16px 40px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 50px;
+        gap: 30px;
+    }
+
+    aside {
+        width: 35%;
+        border-right: 1px solid gray;
+        border-bottom: none;
+        padding-right: 30px;
+    }
+
+    article {
+        width: 65%;
+    }
+
+    article ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
