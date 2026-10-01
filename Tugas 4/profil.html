@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi</title>
+    <link rel="stylesheet" href="profil.css">
+</head>
 
+<body>
+
+<header>
+    <h1>Alexander Ricky</h1>
+    <p><strong>Mahasiswa Informatika</strong></p>
+
+    <button id="btn-tema">Mode Gelap</button>
+    <hr>
+</header>
+
+<div class="tombol-info">
+    <button id="btn-info">Toggle Info Tambahan</button>
+</div>
+
+<main>
+
+    <aside id="kotak-aside">
+
+        <img
+            src="ricky.jpeg"
+            alt="Foto Profil Alexander Ricky"
+            width="130"
+            height="180"
+        >
+
+        <section>
+            <h2>Kontak</h2>
+            <p>Telp: 0812-1257-4566</p>
+            <p>Email: rickypangestu112@gmail.com</p>
+        </section>
+
+    </aside>
+
+    <article>
+
+        <h2>Tentang Saya</h2>
+
+        <section>
+            <h3>Profil</h3>
+
+            <p>
+                Saya adalah mahasiswa Program Studi Informatika
+                Universitas Sanata Dharma Angkatan 2025.
+                Saya memiliki ketertarikan pada bidang teknologi
+                dan pemrograman juga dengan hal-hal baru.
+            </p>
+        </section>
+
+        <section>
+            <h3>Data Diri</h3>
+
+            <ol>
+                <li>Nama : Alexander Ricky Putra Pangestu</li>
+                <li>NIM : 255314035</li>
+                <li>Asal : Bogor</li>
+                <li>Umur : 19</li>
+                <li>Pekerjaan : Mahasiswa</li>
+                <li>Kampus : Universitas Sanata Dharma</li>
+                <li>Prodi : Informatika</li>
+                <li>Hobi : Bermain Organ dan bernyanyi</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Portofolio / Pengalaman</h3>
+
+            <div class="form-portofolio">
+                <input
+                    type="text"
+                    id="input-kegiatan"
+                    placeholder="Nama kegiatan / organisasi"
+                >
+
+                <input
+                    type="text"
+                    id="input-jabatan"
+                    placeholder="Jabatan"
+                >
+
+                <input
+                    type="text"
+                    id="input-tahun"
+                    placeholder="Tahun"
+                >
+
+                <button id="btn-tambah">Tambah</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Kegiatan / Organisasi</th>
+                            <th>Jabatan</th>
+                            <th>Tahun</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftar-portofolio">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </article>
+
+</main>
+
+<footer>
+    <nav>
+        <p>&copy; 2026 Alexander Ricky Putra Pangestu</p>
+
+        <p>
+            <a
+                href="https://www.instagram.com/arpp0713/"
+                target="_blank"
+            >
+                @arpp0713
+            </a>
+        </p>
+    </nav>
+</footer>
+
+<script src="profil.js"></script>
+
+</body>
+</html>
