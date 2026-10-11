@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
 
+<!-- Partikel Dekorasi Latar Belakang -->
+<div class="bg-shape shape-1"></div>
+<div class="bg-shape shape-2"></div>
+<div class="bg-shape shape-3"></div>
+
+<div class="form-container">
+  
+  <!-- Header dengan Logo di Kiri Atas -->
+  <div class="form-header">
+    <div class="logo-box">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h2>Universitas Sanata Dharma 2.0</h2>
+      <p>Pendaftaran Mahasiswa Baru T.A. 2026/2027</p>
+    </div>
+  </div>
+  
+  <div id="successAlert" class="alert-success">
+    🎉 Pendaftaran berhasil! Data Anda telah terkirim ke sistem.
+  </div>
+
+  <form id="registrationForm" novalidate>
+    <div class="form-grid">
+
+      <!-- Nama Lengkap -->
+      <div class="form-group full-width">
+        <label for="nama">Nama Lengkap *</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap sesuai ijazah">
+        <span class="error-message" id="namaError">Nama wajib diisi.</span>
+      </div>
+
+      <!-- NIK -->
+      <div class="form-group">
+        <label for="nik">NIK (16 Digit) *</label>
+        <input type="text" id="nik" placeholder="Contoh: 3374012345678901" maxlength="16">
+        <span class="error-message" id="nikError">NIK harus 16 digit angka.</span>
+      </div>
+
+      <!-- NISN -->
+      <div class="form-group">
+        <label for="nisn">NISN (10 Digit) *</label>
+        <input type="text" id="nisn" placeholder="Contoh: 0051234567" maxlength="10">
+        <span class="error-message" id="nisnError">NISN harus 10 digit angka.</span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Aktif *</label>
+        <input type="email" id="email" placeholder="contoh@domain.com">
+        <span class="error-message" id="emailError">Format email tidak valid.</span>
+      </div>
+
+      <!-- Nomor HP -->
+      <div class="form-group">
+        <label for="telepon">Nomor HP / WhatsApp *</label>
+        <input type="tel" id="telepon" placeholder="Contoh: 081234567890">
+        <span class="error-message" id="teleponError">Nomor HP harus valid (08xx, 10-13 digit angka).</span>
+      </div>
+
+      <!-- Jenis Kelamin -->
+      <div class="form-group">
+        <label for="jenisKelamin">Jenis Kelamin *</label>
+        <select id="jenisKelamin">
+          <option value="">-- Pilih Jenis Kelamin --</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+        <span class="error-message" id="jenisKelaminError">Jenis kelamin wajib dipilih.</span>
+      </div>
+
+      <!-- Program Studi -->
+      <div class="form-group">
+        <label for="prodi">Program Studi *</label>
+        <select id="prodi">
+          <option value="">-- Pilih Program Studi --</option>
+          <option value="Informatika">Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Manajemen">Manajemen</option>
+          <option value="Akuntansi">Akuntansi</option>
+          <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+        </select>
+        <span class="error-message" id="prodiError">Program studi wajib dipilih.</span>
+      </div>
+
+      <!-- Asal Sekolah -->
+      <div class="form-group full-width">
+        <label for="asalSekolah">Asal Sekolah *</label>
+        <input type="text" id="asalSekolah" placeholder="Masukkan nama sekolah SMA/SMK/MA asal">
+        <span class="error-message" id="asalSekolahError">Asal sekolah wajib diisi.</span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Masukkan password">
+          <button type="button" class="btn-toggle-password" onclick="togglePassword('password', this)">Lihat</button>
+        </div>
+        <small class="hint-text">Min. 8 karakter, kombinasi huruf & angka.</small>
+        <span class="error-message" id="passwordError">Password minimal 8 karakter dan kombinasi huruf & angka.</span>
+      </div>
+
+      <!-- Konfirmasi Password -->
+      <div class="form-group">
+        <label for="confirmPassword">Konfirmasi Password *</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" placeholder="Ulangi password">
+          <button type="button" class="btn-toggle-password" onclick="togglePassword('confirmPassword', this)">Lihat</button>
+        </div>
+        <span class="error-message" id="confirmPasswordError">Konfirmasi password tidak cocok!</span>
+      </div>
+
+    </div>
+
+    <button type="submit" class="btn-submit">Daftar Sekarang</button>
+  </form>
+</div>
+
+<script src="form.js"></script>
+</body>
+</html>
