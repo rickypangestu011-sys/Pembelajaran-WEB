@@ -1,0 +1,426 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #1f4e78;
+    color: white;
+}
+
+header h1,
+header p {
+    margin: 0;
+}
+
+header button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tombol-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tombol-info button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#btn-reset {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c0392b;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#btn-reset:hover {
+    background-color: #962d22;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+aside {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 25px;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside section {
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+article {
+    width: 100%;
+}
+
+article section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+article ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding-left: 25px;
+    line-height: 1.6;
+    list-style-position: inside;
+}
+
+article li {
+    padding: 10px;
+}
+
+.form-portofolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-portofolio input,
+#form-komentar input,
+#form-komentar textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-portofolio button,
+#form-komentar button {
+    width: fit-content;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#form-komentar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#form-komentar textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#daftar-komentar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.btn-hapus-komentar {
+    flex-shrink: 0;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c0392b;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-hapus-komentar:hover {
+    background-color: #962d22;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table thead tr {
+    background-color: rgb(255, 0, 247);
+    color: white;
+}
+
+table button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.tersembunyi {
+    display: none;
+}
+
+#container-artikel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#container-artikel article {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+#container-artikel article h3 {
+    margin-top: 0;
+}
+
+#container-artikel article p {
+    color: black;
+}
+
+.tombol-artikel {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-like,
+.btn-hapus-artikel {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.artikel-hover {
+    transform: translateY(-3px);
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.dark-mode header {
+    background-color: #112b45;
+    color: white;
+}
+
+body.dark-mode aside {
+    color: white;
+}
+
+body.dark-mode aside section {
+    border-color: #555;
+}
+
+body.dark-mode article {
+    color: white;
+}
+
+body.dark-mode article section p {
+    color: white;
+}
+
+body.dark-mode table {
+    color: white;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+    border-color: #555;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border-color: #777;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode #container-artikel article {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555;
+}
+
+body.dark-mode #container-artikel article h3 {
+    color: white !important;
+}
+
+body.dark-mode #container-artikel article p {
+    color: white !important;
+}
+
+body.dark-mode footer {
+    color: white;
+}
+
+@media (max-width: 767px) {
+
+    header {
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    aside {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    article ol {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    table th,
+    table td {
+        padding: 7px;
+    }
+
+    .form-portofolio {
+        grid-template-columns: 1fr;
+    }
+
+    .form-portofolio input,
+    .form-portofolio button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #container-artikel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    header {
+        padding: 16px 30px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 30px;
+        gap: 25px;
+    }
+
+    aside {
+        width: 35%;
+        border-right: 1px solid gray;
+        border-bottom: none;
+        padding-right: 20px;
+    }
+
+    article {
+        width: 65%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    #container-artikel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+
+    header {
+        padding: 16px 40px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 50px;
+        gap: 30px;
+    }
+
+    aside {
+        width: 35%;
+        border-right: 1px solid gray;
+        border-bottom: none;
+        padding-right: 30px;
+    }
+
+    article {
+        width: 65%;
+    }
+
+    article ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #container-artikel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+#btn-atas {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btn-atas.tampil {
+    display: block;
+}
