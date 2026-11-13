@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 24px;
+    background-color: #1f4e78;
+    color: white;
+    text-align: center;
+}
+
+header h1,
+header p {
+    margin: 0;
+}
+
+header salam-pengguna {
+    display: block;
+    margin-top: 8px;
+}
+
+tombol-tema {
+    display: block;
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+#btn-tema,
+#btn-info {
+    background: white;
+    color: #1f4e78;
+}
+.btn-edit-komentar {
+    background-color: #33d521;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btn-edit-komentar:hover {
+    background-color: #0a1535;
+}
+.tombol-info {
+    text-align: center;
+    margin-top: 12px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px;
+}
+
+aside {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 25px;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+aside section {
+    margin-top: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #aaa;
+}
+
+.konten-utama {
+    width: 100%;
+    min-width: 0;
+}
+
+.konten-utama section {
+    margin-bottom: 28px;
+}
+
+.konten-utama section p {
+    text-align: justify;
+}
+
+.konten-utama ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding-left: 25px;
+}
+
+.konten-utama li {
+    padding: 6px;
+}
+
+#form-portofolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+#form-portofolio input,
+#form-komentar input,
+#form-komentar textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+#form-portofolio button,
+#form-komentar button {
+    background: #1f4e78;
+    color: white;
+}
+
+#form-komentar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#form-komentar textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th,
+table td {
+    border: 1px solid #888;
+    padding: 10px;
+}
+
+table thead {
+    background: #1f4e78;
+    color: white;
+}
+
+.btn-hapus-portofolio {
+    background: #c0392b;
+    color: white;
+}
+
+#daftar-komentar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+kartu-komentar {
+    display: block;
+}
+
+kartu-komentar .isi-komentar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+kartu-komentar .nama-komentar {
+    width: 100%;
+    font-weight: bold;
+}
+
+kartu-komentar .pesan-komentar {
+    flex: 1;
+    min-width: 150px;
+}
+
+.btn-hapus-komentar {
+    background: #c0392b;
+    color: white;
+}
+
+#container-artikel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+kartu-artikel {
+    display: block;
+    min-width: 0;
+}
+
+kartu-artikel article {
+    height: 100%;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    color: #222;
+    overflow-wrap: anywhere;
+    transition: transform 0.2s ease;
+}
+
+kartu-artikel article h3 {
+    margin-top: 0;
+}
+
+kartu-artikel article p {
+    text-align: left;
+}
+
+.tombol-artikel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn-like {
+    background: #1f7a4d;
+    color: white;
+}
+
+.btn-hapus-artikel {
+    background: #c0392b;
+    color: white;
+}
+
+kartu-artikel article.artikel-hover {
+    transform: translateY(-3px);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.loading[hidden] {
+    display: none;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ddd;
+    border-top-color: #1f4e78;
+    border-radius: 50%;
+    animation: putar 0.8s linear infinite;
+}
+
+@keyframes putar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#profil-penulis {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 18px;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.tersembunyi {
+    display: none;
+}
+
+#btn-reset {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    padding: 10px 15px;
+    background: #c0392b;
+    color: white;
+}
+
+#btn-atas {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #1f4e78;
+    color: white;
+    font-size: 24px;
+}
+
+#btn-atas.tampil {
+    display: block;
+}
+
+body.dark-mode {
+    background: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.dark-mode header {
+    background: #112b45;
+    color: white;
+}
+
+body.dark-mode aside section {
+    border-color: #555;
+}
+
+body.dark-mode table {
+    color: white;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+    border-color: #666;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #333;
+    color: white;
+    border-color: #777;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode kartu-artikel article {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode kartu-komentar .isi-komentar,
+body.dark-mode #profil-penulis {
+    border-color: #555;
+}
+
+body.dark-mode footer {
+    background: #252525;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    main {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    #form-portofolio {
+        grid-template-columns: 1fr;
+    }
+
+    #form-portofolio input,
+    #form-portofolio button {
+        width: 100%;
+    }
+
+    table {
+        min-width: 600px;
+        font-size: 13px;
+    }
+
+    #container-artikel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    main {
+        flex-direction: row;
+        margin: 30px;
+        gap: 25px;
+    }
+
+    aside {
+        flex: 0 0 35%;
+        width: 35%;
+        border-right: 1px solid #aaa;
+        border-bottom: none;
+        padding-right: 20px;
+    }
+
+    main > .konten-utama {
+        flex: 1 1 65%;
+        width: 65%;
+    }
+
+    #form-portofolio {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #container-artikel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        flex-direction: row;
+        margin: 50px;
+        gap: 30px;
+    }
+
+    aside {
+        flex: 0 0 30%;
+        width: 30%;
+        border-right: 1px solid #aaa;
+        border-bottom: none;
+        padding-right: 30px;
+    }
+
+    main > .konten-utama {
+        flex: 1 1 70%;
+        width: 70%;
+    }
+
+    .konten-utama ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

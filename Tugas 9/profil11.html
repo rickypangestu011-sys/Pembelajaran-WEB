@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi</title>
+    <link rel="stylesheet" href="profil11.css">
+    <script src="komponen11.js" defer></script>
+    <script src="profil11.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Alexander Ricky</h1>
+        <p>Mahasiswa Informatika</p>
+        <salam-pengguna nama="Semua"></salam-pengguna>
+        <tombol-tema></tombol-tema>
+    </header>
 
+    <div class="tombol-info">
+        <button id="btn-info" type="button">Toggle Info Tambahan</button>
+    </div>
+
+    <main>
+        <aside>
+            <img src="ricky.jpeg" alt="Foto Profil Alexander Ricky" width="130" height="180">
+
+            <section>
+                <h2>Kontak</h2>
+                <p>Telp: 08123456789</p>
+                <p>Email: alexander.ricky@gmail.com</p>
+            </section>
+
+            <section id="info-tambahan" class="tersembunyi">
+                <h2>Info Tambahan</h2>
+                <p>Saya tertarik mempelajari teknologi, pemrograman, dan hal-hal baru.</p>
+                <p>Saya memiliki kemampuan HTML, CSS, JavaScript, Java, dan Python.</p>
+            </section>
+        </aside>
+
+        <article class="konten-utama">
+            <section>
+                <h2>Tentang Saya</h2>
+                <p>
+                    Saya adalah mahasiswa Program Studi Informatika
+                    Universitas Sanata Dharma Angkatan 2025.
+                    Saya berasal dari Bogor dan memiliki ketertarikan
+                    pada bidang teknologi serta pemrograman.
+                </p>
+            </section>
+
+            <section>
+                <h2>Data Diri</h2>
+                <ol>
+                    <li>Nama: Alexander Ricky Putra Pangestu</li>
+                    <li>NIM: 255314035</li>
+                    <li>Asal: Bogor</li>
+                    <li>Umur: 19 tahun</li>
+                    <li>Pekerjaan: Mahasiswa</li>
+                    <li>Kampus: Universitas Sanata Dharma</li>
+                    <li>Program Studi: Informatika</li>
+                    <li>Hobi: Bermain organ dan bernyanyi</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Portofolio / Pengalaman</h2>
+
+                <form id="form-portofolio">
+                    <input type="text" id="input-kegiatan" placeholder="Nama kegiatan / organisasi" required>
+                    <input type="text" id="input-jabatan" placeholder="Jabatan" required>
+                    <input type="text" id="input-tahun" placeholder="Tahun" required>
+                    <button type="submit">Tambah</button>
+                </form>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Kegiatan / Organisasi</th>
+                                <th>Jabatan</th>
+                                <th>Tahun</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="daftar-portofolio"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="komentar">
+                <h2>Komentar</h2>
+
+                <form id="form-komentar">
+                    <input type="text" id="input-nama" placeholder="Nama Anda" minlength="3" maxlength="30" required>
+                    <textarea id="input-pesan" placeholder="Tulis komentar..." minlength="5" maxlength="200" required></textarea>
+                    <button type="submit">Kirim Komentar</button>
+                </form>
+
+                <div id="loading-komentar" class="loading" hidden>
+                    <span class="spinner"></span>
+                    <span>Memuat komentar...</span>
+                </div>
+
+                <p id="pesan-komentar" role="status"></p>
+                <div id="daftar-komentar"></div>
+            </section>
+
+            <section id="artikel">
+                <h2>Artikel</h2>
+
+                <div id="loading-artikel" class="loading" hidden>
+                    <span class="spinner"></span>
+                    <span>Memuat artikel...</span>
+                </div>
+
+                <p id="pesan-artikel" role="status"></p>
+                <div id="container-artikel"></div>
+            </section>
+
+            <section id="profil-penulis">
+                <h2>Profil Penulis API</h2>
+                <p>Nama: <span id="nama-penulis">Memuat...</span></p>
+                <p>Email: <span id="email-penulis">Memuat...</span></p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alexander Ricky Putra Pangestu</p>
+        <p>
+            <a href="https://www.instagram.com/arpp0713/" target="_blank" rel="noopener noreferrer">
+                @arpp0713
+            </a>
+        </p>
+    </footer>
+
+    <button id="btn-atas" type="button" aria-label="Kembali ke atas">↑</button>
+    <button id="btn-reset" type="button">Reset Data</button>
+</body>
+</html>
